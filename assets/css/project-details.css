@@ -1,0 +1,253 @@
+@import url('./globals.css');
+
+.header {
+    position: fixed;
+    inset-block-end: 0;
+    width: 100%;
+    padding-block: 1.8rem;
+    background: var(--container-color);
+    z-index: 1;
+}
+
+.header__scroll {
+    border-block-start: var(--border-primary);
+    box-shadow: var(--shadow-primary-top);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__link--back {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar__link--back:hover {
+    color: var(--title-color);
+}
+
+.navbar__link--back i {
+    font-size: 2.2rem;
+}
+
+.hero {
+    padding-block-start: 3rem;
+}
+
+.project-title {
+    color: var(--title-color);
+    font-size: 2.5rem;
+    margin-block-end: 1.5rem;
+}
+
+.project-year {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.project-summary {
+    color: var(--text-color);
+    margin-block-end: 4rem;
+}
+
+.projects-views {
+    margin-block-end: 2rem;
+}
+
+.project-figure {
+    margin-block-end: 5rem;
+}
+
+.project-figure__content {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--content-color);
+    border: var(--border-primary);
+    margin-block-end: 1rem;
+}
+
+.project-figure__caption {
+    font-size: 1.5rem;
+    padding-inline: 1rem;
+}
+
+.project-figure__caption-link {
+    text-decoration: underline;
+}
+
+.project-figure__caption-link:hover {
+    color: var(--title-color);
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    color: var(--title-color);
+    margin-block-end: 2rem;
+    font-weight: 500;
+}
+
+/* ===== ===== ===== ===== ===== TECHNOLOGIES ===== ===== ===== ===== ===== */
+
+.technologies {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-block-end: 4rem;
+}
+
+.technology {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: var(--border-primary);
+    border-radius: 2rem;
+    padding-block: 0.3rem;
+    padding-inline: 1.5rem;
+}
+
+.technology__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.4rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.technology__icon svg {
+    width: 2rem;
+}
+
+.technology__icon img {
+    width: 2rem;
+}
+
+.technology__name {
+    font-size: 1.4rem;
+}
+
+/* ===== ===== ===== ===== ===== PROJECT INFO ===== ===== ===== ===== ===== */
+
+.project-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-block-end: 8rem;
+}
+
+/* Versions */
+.versions {
+    display: flex;
+    gap: 1rem;
+}
+
+.versions__item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: var(--border-primary);
+    border-radius: 2rem;
+    padding-block: 0.3rem;
+    padding-inline: 1.5rem;
+}
+
+/* Links */
+.links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.links__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    border: var(--border-primary);
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.links__item:hover{
+    color: var(--title-color);
+    border: 0.1rem solid var(--text-color);
+}
+
+.links__item:hover .link-external-icon {
+    animation: float-up 2s ease-in-out infinite;
+}
+
+.links__item-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links__item-name i{
+    font-size: 1.8rem;
+}
+
+/* ===== ===== ===== ===== ===== PROJECT CONTACT ===== ===== ===== ===== ===== */
+
+.project-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    margin-block-end: 8rem;
+}
+
+.project-contact__text {
+    color: var(--text-color);
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.project-contact__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.project-contact__link:hover {
+    color: var(--title-color);
+}
+
+.project-contact__link:hover .link-external-icon {
+    animation: float-up 2s ease-in-out infinite;
+}
+
+
+@media (min-width: 768px){
+    
+    .header {
+        background-color: var(--body-color);
+        padding-block: 2rem;
+        position: fixed;
+        inset-block-start: 0;
+        inset-block-end: unset;
+        border-block-start: none;
+    }
+    
+    .header__scroll {
+        box-shadow: none;
+        border-block-end: var(--border-primary)
+    }
+    
+    .hero {
+        padding-block-start: 9rem;
+    }    
+
+    .project-info {
+        gap: 8rem;
+    }    
+}
